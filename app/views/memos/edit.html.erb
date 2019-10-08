@@ -1,5 +1,5 @@
 <h3>Edit memo</h3>
-<%= form_tag("/memos/"+@memo.id.to_s,:method=>:patch) do %>
+<%= form_tag("/memos/"+@memo.id.to_s,:method => :patch) do %>
     <div class="form-group">
         <%= label_tag "form-title", "Title" %>
         <%= text_field :memos, :title, id:"form-title", class:"form-control", value: @memo.title %>

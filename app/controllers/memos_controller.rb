@@ -24,8 +24,9 @@ class MemosController < ApplicationController
 
   def update
       memo=Memo.find(params["id"])
-      memo.title=params["memos"]["title"]
-      memo.body=params["memos"]["body"]
+      memo.title = params["memos"]["title"]
+      memo.body = params["memos"]["body"]
+      memo.save
       redirect_to"/"
   end
 end
